@@ -1,18 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="inicio.css">
     <title>DevCommunity</title>
 </head>
 <body>
-    <a href="mysql.html"></a>
-    <a href="postgresql.html"></a>
-    <a href="sqlite.html"></a>
-    <a href="sqlserver.html"></a>
-    <a href="mongodb.html"></a>
-    <a href="cassandra.html"></a>
-    <a href="dynamodb.html"></a>
-    <a href="neo4j.html"></a>
+    <header>
+        <h1>DevCommunity</h1>
+    </header>
+
+    <div class="container">
+        <section class="general-info">
+            <h3>¿Qué son las Bases de Datos?</h3>
+            <p>En el mundo de la tecnología y el desarrollo de software, las bases de datos juegan un papel fundamental. Son sistemas organizados para almacenar, gestionar y recuperar información de manera eficiente. Imagina una biblioteca gigante donde cada libro (dato) está catalogado y puedes encontrarlo rápidamente cuando lo necesitas.</p>
+
+            <h3>Importancia de las Bases de Datos</h3>
+            <p>Las bases de datos son cruciales para una amplia variedad de aplicaciones, desde sitios web y aplicaciones móviles hasta sistemas de gestión empresarial. Permiten:</p>
+            <ul>
+                <li><strong>Almacenar grandes volúmenes de datos:</strong> De forma estructurada y organizada.</li>
+                <li><strong>Acceder a la información rápidamente:</strong> Mediante consultas y búsquedas eficientes.</li>
+                <li><strong>Mantener la integridad de los datos:</strong> Asegurando la consistencia y precisión de la información.</li>
+                <li><strong>Compartir información:</strong> Permitiendo que múltiples usuarios y aplicaciones accedan a los mismos datos de forma controlada.</li>
+                <li><strong>Analizar datos:</strong> Facilitando la extracción de información valiosa para la toma de decisiones.</li>
+            </ul>
+
+            <h3>Tipos Principales: SQL y NoSQL</h3>
+            <p>Generalmente, las bases de datos se dividen en dos categorías principales:</p>
+            <ul>
+                <li><strong>Bases de Datos SQL (Relacionales):</strong> Estas bases de datos utilizan un esquema fijo y estructurado, donde los datos se organizan en tablas con filas y columnas. El lenguaje estándar para interactuar con ellas es SQL (Structured Query Language). Ejemplos populares incluyen MySQL, PostgreSQL y SQLite.</li>
+                <li><strong>Bases de Datos NoSQL (No Relacionales):</strong> Estas bases de datos ofrecen más flexibilidad en el esquema y son ideales para manejar datos no estructurados o semi-estructurados. Existen diferentes tipos de bases de datos NoSQL, como las orientadas a documentos (MongoDB), clave-valor (Redis), de grafos (Neo4j) y de columnas (Cassandra).</li>
+            </ul>
+            <p>A continuación, exploraremos algunos ejemplos específicos de bases de datos SQL y NoSQL.</p>
+        </section>
+        <h2>Bases de Datos SQL</h2>
+        <div class="database-grid">
+            <a href="mysql.html" class="database-card">
+                <img src="imagenes/mysql.png" alt="MySQL">
+                <h3>MySQL</h3>
+                <p>Popular sistema de gestión de bases de datos relacional, de código abierto y ampliamente utilizado en aplicaciones web.</p>
+            </a>
+            <a href="postgresql.html" class="database-card">
+                <img src="imagenes/PostgreSQL.png" alt="PostgreSQL">
+                <h3>PostgreSQL</h3>
+                <p>Potente base de datos relacional de código abierto, conocida por su extensibilidad y cumplimiento de estándares.</p>
+            </a>
+            <a href="sqlite.html" class="database-card">
+                <img src="imagenes/SQLite.png" alt="SQLite">
+                <h3>SQLite</h3>
+                <p>Base de datos relacional ligera y autónoma, ideal para aplicaciones locales o embebidas.</p>
+            </a>
+            <a href="sqlserver.html" class="database-card">
+                <img src="imagenes/SQLserver.png" alt="SQL Server">
+                <h3>SQL Server</h3>
+                <p>Sistema de gestión de bases de datos relacional desarrollado por Microsoft, robusto y con muchas funcionalidades.</p>
+            </a>
+        </div>
+
+        <h2>Bases de Datos NoSQL</h2>
+        <div class="database-grid">
+            <a href="mongodb.html" class="database-card">
+                <img src="imagenes/MongoDB.png" alt="MongoDB">
+                <h3>MongoDB</h3>
+                <p>Base de datos NoSQL orientada a documentos, flexible y escalable para datos no estructurados.</p>
+            </a>
+            <a href="cassandra.html" class="database-card">
+                <img src="imagenes/Cassandra.png" alt="Cassandra">
+                <h3>Cassandra</h3>
+                <p>Base de datos NoSQL distribuida y altamente escalable, diseñada para alta disponibilidad y rendimiento.</p>
+            </a>
+            <a href="dynamodb.html" class="database-card">
+                <img src="imagenes/DynamoDB.webp" alt="DynamoDB">
+                <h3>DynamoDB</h3>
+                <p>Servicio de base de datos NoSQL clave-valor totalmente gestionado y escalable de Amazon Web Services.</p>
+            </a>
+            <a href="neo4j.html" class="database-card">
+                <img src="imagenes/neo4j.webp" alt="Neo4j">
+                <h3>Neo4j</h3>
+                <p>Base de datos NoSQL de grafos, optimizada para almacenar y consultar relaciones entre datos.</p>
+            </a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 DevCommunity</p>
+        <p>Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>

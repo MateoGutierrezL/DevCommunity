@@ -1,0 +1,98 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f0f0f8; /* Un tono morado pastel muy claro */
+    color: #333;
+}
+
+header {
+    background-color: #a39bff; /* Un tono morado pastel */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    padding: 20px;
+}
+
+h2 {
+    color: #7c6aff; /* Un tono morado pastel un poco más oscuro */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #d0bff7; /* Un tono morado pastel más claro */
+    padding-bottom: 5px;
+}
+
+.general-info {
+    background-color: #e6e6fa; /* Otro tono morado pastel */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    line-height: 2;
+}
+
+.general-info h3 {
+    color: #7c6aff; /* Un tono morado pastel un poco más oscuro */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.database-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.database-card {
+    background-color: #e6e6fa; /* Otro tono morado pastel */
+    border-radius: 8px;
+    padding: 15px;
+    box-sizing: border-box;
+    width: calc(50% - 10px); /* Para que entren dos por fila con un espacio entre ellos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centrar el contenido verticalmente */
+    text-align: center;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none; /* Eliminar el subrayado de los enlaces */
+    color: #333; /* Color del texto dentro del recuadro */
+    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+.database-card p {
+    max-width: 80%;
+    margin: 0 auto 20px auto;
+}
+
+.database-card:hover {
+    background-color: #d0bff7; /* Un tono morado pastel más claro al pasar el ratón */
+}
+
+.database-card img {
+    max-width: 80%;
+    max-height: 200px;
+    margin-bottom: 10px;
+    border-radius: 5px; /* Opcional: bordes redondeados para la imagen */
+}
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .database-card {
+        width: 100%; /* Ocupar todo el ancho en pantallas pequeñas */
+    }
+}
+
+footer {
+    background-color: #a39bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sutil sombra superior */
+    
+}
