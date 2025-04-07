@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="mongodb.css">
+  <title>MongoDB - DevCommunity</title>
+</head>
+<body>
+  <header>
+    <h1>MongoDB</h1>
+    <p style="font-size: 1.2em; margin-top: 10px;">
+      Base de datos NoSQL orientada a documentos, flexible y escalable para datos no estructurados.
+    </p>
+  </header>
+
+  <div class="container">
+    <section class="intro-section">
+      <div class="image-container">
+        <img src="imagenes/MongoDB.png" alt="Logo de MongoDB">
+      </div>
+      <div class="text-content">
+        <h2>Explora la flexibilidad de MongoDB</h2>
+        <p>
+          MongoDB es una base de datos NoSQL que almacena la información en documentos JSON-like, lo que permite una mayor flexibilidad al manejar datos semi-estructurados. Su escalabilidad horizontal y la posibilidad de adaptarse a distintos modelos de datos la convierten en una opción ideal para aplicaciones modernas.
+        </p>
+      </div>
+    </section>
+
+    <section class="key-features-section">
+      <h2>Características Destacadas de MongoDB</h2>
+      <div class="feature-cards">
+        <div class="feature-card">
+          <h3>Modelo de Datos Flexible</h3>
+          <p>Permite almacenar documentos con diferentes estructuras, facilitando el manejo de datos heterogéneos.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Escalabilidad Horizontal</h3>
+          <p>Soporta el sharding para distribuir la carga y manejar grandes volúmenes de información.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Consultas Poderosas</h3>
+          <p>Utiliza un lenguaje de consultas basado en JSON que facilita filtros y búsquedas complejas.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Comunidad y Soporte</h3>
+          <p>Cuenta con una activa comunidad que aporta herramientas, documentación y soluciones a problemas comunes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="code-section">
+      <h2>Ejemplo de Consultas en MongoDB</h2>
+      <p>
+        MongoDB utiliza su propia sintaxis para interactuar con la base de datos. Aquí tienes algunos ejemplos básicos utilizando la shell de MongoDB:
+      </p>
+      <div class="code-example">
+        <code>
+// Seleccionar la base de datos "miBaseDeDatos"
+use miBaseDeDatos
+
+// Insertar documentos en la colección "usuarios"
+db.usuarios.insertMany([
+  { nombre: "Ana García", email: "ana.garcia@example.com" },
+  { nombre: "Luis Pérez", email: "luis.perez@example.com" }
+])
+
+// Consultar documentos en la colección "usuarios"
+db.usuarios.find({ nombre: /Ana/i })
+
+// Actualizar un documento en la colección "usuarios"
+db.usuarios.updateOne(
+  { nombre: "Ana García" },
+  { $set: { email: "ana.actualizada@example.com" } }
+)
+
+// Eliminar un documento en la colección "usuarios"
+db.usuarios.deleteOne({ nombre: "Luis Pérez" })
+        </code>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 DevCommunity</p>
+    <p>Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
