@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sqlserver.css">
+    <title>SQL Server - DevCommunity</title>
+</head>
+<body>
+    <header>
+        <h1>SQL Server</h1>
+        <p style="font-size: 1.2em; margin-top: 10px;">El centro de datos de Microsoft</p>
+    </header>
+
+    <div class="container">
+        <section class="intro-section">
+            <div class="image-container">
+                <img src="imagenes/SQLserver.png" alt="Logo de SQL Server">
+            </div>
+            <div class="text-content">
+                <h2>Potencia tu negocio con SQL Server</h2>
+                <p>Microsoft SQL Server es un sistema de administración de bases de datos relacionales (RDBMS) que ofrece una amplia gama de soluciones de almacenamiento de datos, inteligencia empresarial y análisis.  Es compatible con una variedad de tipos de datos y cargas de trabajo, y se utiliza en diversas industrias para aplicaciones críticas.</p>
+            </div>
+        </section>
+
+        <section class="key-features-section">
+            <h2>Características que impulsan la innovación</h2>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <h3>Rendimiento líder en la industria</h3>
+                    <p>Ofrece un rendimiento excepcional con procesamiento en memoria, optimización de consultas y almacenamiento en caché.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Seguridad avanzada</h3>
+                    <p>Protege los datos confidenciales con cifrado, autenticación y autorización avanzadas, y auditoría.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Inteligencia de negocios integral</h3>
+                    <p>Proporciona herramientas para la creación de informes, el análisis y la visualización de datos, lo que permite tomar decisiones basadas en datos.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Integración con la nube</h3>
+                    <p>Se integra perfectamente con Azure, lo que permite soluciones híbridas y migración a la nube.</p>
+                </div>
+                 <div class="feature-card">
+                    <h3>Soporte para datos espaciales y no estructurados</h3>
+                    <p>Permite almacenar y consultar datos geoespaciales y también datos no estructurados como JSON y XML.</p>
+                </div>
+                 <div class="feature-card">
+                    <h3>Herramientas de desarrollo robustas</h3>
+                    <p>Ofrece un conjunto completo de herramientas para el desarrollo, la administración y la implementación de bases de datos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="code-section">
+            <h2>Transact-SQL (T-SQL) de un vistazo</h2>
+            <p>T-SQL es el lenguaje de programación utilizado para administrar e interactuar con SQL Server.  Aquí hay algunos ejemplos:</p>
+
+            <div class="code-example">
+                <code>
+-- Crear una base de datos
+CREATE DATABASE MiBaseDeDatos;
+GO
+
+-- Usar la base de datos
+USE MiBaseDeDatos;
+GO
+
+-- Crear una tabla
+CREATE TABLE Clientes (
+    ID INT PRIMARY KEY IDENTITY(1,1),
+    Nombre NVARCHAR(100) NOT NULL,
+    CorreoElectronico NVARCHAR(255) UNIQUE
+);
+GO
+
+-- Insertar datos
+INSERT INTO Clientes (Nombre, CorreoElectronico)
+VALUES (N'Juan Pérez', N'juan.perez@example.com'), (N'María García', N'maria.garcia@example.com');
+GO
+
+-- Seleccionar datos
+SELECT Nombre, CorreoElectronico
+FROM Clientes
+WHERE Nombre LIKE N'J%';
+GO
+
+-- Actualizar datos
+UPDATE Clientes
+SET CorreoElectronico = N'juan.perez.actualizado@example.com'
+WHERE ID = 1;
+GO
+
+-- Eliminar datos
+DELETE FROM Clientes
+WHERE ID = 2;
+GO
+                </code>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 DevCommunity</p>
+        <p>Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
