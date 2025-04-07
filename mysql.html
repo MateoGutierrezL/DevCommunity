@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mysql.css">
+    <title>MySQL - DevCommunity</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MySQL</h1>
+        <p style="font-size: 1.1em; margin-top: 5px;">El popular sistema de gestión de bases de datos relacional</p>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <h2>¿Qué es MySQL?</h2>
+            <div class="image-container">
+                <img src="imagenes/mysql.png" alt="Logo de MySQL">
+            </div>
+            <p>MySQL es un sistema de gestión de bases de datos relacional (RDBMS) de código abierto. Es uno de los RDBMS más populares del mundo y es ampliamente utilizado en aplicaciones web (a menudo como parte de la pila LAMP: Linux, Apache, MySQL, PHP/Python/Perl). Su facilidad de uso, confiabilidad y gran comunidad lo han convertido en una opción preferida para muchas aplicaciones.</p>
+        </section>
+
+        <section class="section">
+            <h2>Características Principales de MySQL</h2>
+            <ul>
+                <li><strong>Código Abierto:</strong> Distribuido bajo la licencia GPL, lo que permite su uso y modificación de forma gratuita (en ciertas condiciones).</li>
+                <li><strong>Multiplataforma:</strong> Funciona en una amplia variedad de sistemas operativos, incluyendo Linux, Windows y macOS.</li>
+                <li><strong>Escalabilidad:</strong> Puede manejar grandes cantidades de datos y un alto número de usuarios concurrentes.</li>
+                <li><strong>Seguridad:</strong> Ofrece diversas características de seguridad para proteger los datos.</li>
+                <li><strong>Rendimiento:</strong> Conocido por su velocidad y eficiencia en muchas cargas de trabajo.</li>
+                <li><strong>Replicación:</strong> Soporta la replicación de datos entre múltiples servidores para mejorar la disponibilidad y el rendimiento.</li>
+                <li><strong>Soporte para Transacciones:</strong> Permite agrupar múltiples operaciones en unidades lógicas de trabajo (transacciones) con propiedades ACID (Atomicidad, Consistencia, Aislamiento, Durabilidad).</li>
+                <li><strong>Lenguaje SQL:</strong> Utiliza el lenguaje SQL (Structured Query Language) como su lenguaje principal para la gestión y consulta de datos.</li>
+                <li><strong>Gran Comunidad:</strong> Cuenta con una amplia y activa comunidad de usuarios y desarrolladores, lo que facilita la obtención de ayuda y recursos.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Ejemplos de Uso</h2>
+            <p>MySQL se utiliza en una gran variedad de aplicaciones, incluyendo:</p>
+            <ul>
+                <li>Sitios web y aplicaciones web dinámicas (desde pequeños blogs hasta grandes plataformas de comercio electrónico).</li>
+                <li>Aplicaciones móviles como backend para almacenar y gestionar datos de usuarios.</li>
+                <li>Sistemas de gestión de contenido (CMS) como WordPress, Drupal y Joomla.</li>
+                <li>Aplicaciones empresariales para la gestión de datos de clientes, inventario, etc.</li>
+                <li>Sistemas de análisis de datos y business intelligence.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Conceptos Básicos de SQL en MySQL</h2>
+            <p>Para interactuar con MySQL, se utiliza principalmente el lenguaje SQL. Aquí hay algunos comandos básicos:</p>
+            <h3>Crear una Tabla</h3>
+            <div class="code-example">
+                <code>
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+                </code>
+            </div>
+
+            <h3>Insertar Datos</h3>
+            <div class="code-example">
+                <code>
+INSERT INTO usuarios (nombre, email) VALUES ('Juan Pérez', 'juan.perez@example.com');
+INSERT INTO usuarios (nombre, email) VALUES ('María López', 'maria.lopez@example.com');
+                </code>
+            </div>
+
+            <h3>Seleccionar Datos</h3>
+            <div class="code-example">
+                <code>
+SELECT * FROM usuarios;
+SELECT nombre, email FROM usuarios WHERE id = 1;
+                </code>
+            </div>
+
+            <h3>Actualizar Datos</h3>
+            <div class="code-example">
+                <code>
+UPDATE usuarios SET email = 'juan.p@example.com' WHERE id = 1;
+                </code>
+            </div>
+
+            <h3>Eliminar Datos</h3>
+            <div class="code-example">
+                <code>
+DELETE FROM usuarios WHERE id = 2;
+                </code>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Ventajas y Desventajas de MySQL</h2>
+            <h3>Ventajas</h3>
+            <ul>
+                <li>Amplia disponibilidad y gran comunidad de soporte.</li>
+                <li>Rendimiento rápido para muchas aplicaciones web.</li>
+                <li>Facilidad de instalación y uso.</li>
+                <li>Buena escalabilidad para lectura (con replicación).</li>
+                <li>Soporte para una amplia gama de herramientas y lenguajes de programación.</li>
+            </ul>
+            <h3>Desventajas</h3>
+            <ul>
+                <li>Algunas características avanzadas son exclusivas de la versión comercial.</li>
+                <li>El rendimiento de escritura puede ser un cuello de botella en ciertas cargas de trabajo muy intensivas.</li>
+                <li>La escalabilidad de escritura puede ser más compleja en comparación con algunas bases de datos NoSQL.</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 DevCommunity</p>
+        <p>Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
