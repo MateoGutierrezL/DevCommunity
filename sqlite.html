@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sqlite.css">
+    <title>SQLite - DevCommunity</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SQLite</h1>
+        <p style="font-size: 1.1em; margin-top: 5px;">La base de datos ligera y autónoma</p>
+    </header>
+
+    <div class="container">
+        <section class="overview-section">
+            <h2>¿Qué es SQLite?</h2>
+            <div class="image-container">
+                <img src="imagenes/SQLite.png" alt="Logo de SQLite">
+            </div>
+            <p>SQLite es una biblioteca de software que proporciona un motor de base de datos SQL transaccional, autónomo, sin servidor y de configuración cero. A diferencia de otros sistemas de gestión de bases de datos, SQLite no tiene un proceso de servidor separado. Lee y escribe directamente en archivos de disco ordinarios. Esto lo convierte en una excelente opción para bases de datos locales/de aplicación.</p>
+        </section>
+
+        <section class="key-features-section">
+            <h2>Características Clave</h2>
+            <div class="key-feature">
+                <div class="icon-container">💾</div>
+                <div class="text-content">
+                    <h3>Sin Servidor</h3>
+                    <p>No requiere un proceso de servidor separado para funcionar. La base de datos es un único archivo en el disco.</p>
+                </div>
+            </div>
+            <div class="key-feature">
+                <div class="icon-container">🔧</div>
+                <div class="text-content">
+                    <h3>Configuración Cero</h3>
+                    <p>No necesita instalación ni configuración. Simplemente comienza a usar la API.</p>
+                </div>
+            </div>
+            <div class="key-feature">
+                <div class="icon-container">🚀</div>
+                <div class="text-content">
+                    <h3>Ligero</h3>
+                    <p>La biblioteca SQLite es pequeña y requiere una cantidad mínima de recursos.</p>
+                </div>
+            </div>
+            <div class="key-feature">
+                <div class="icon-container">🔒</div>
+                <div class="text-content">
+                    <h3>Transaccional</h3>
+                    <p>Soporta transacciones ACID, asegurando la integridad de los datos.</p>
+                </div>
+            </div>
+            <div class="key-feature">
+                <div class="icon-container">🌐</div>
+                <div class="text-content">
+                    <h3>Portátil</h3>
+                    <p>Los archivos de base de datos SQLite son portátiles entre diferentes sistemas operativos y arquitecturas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="usage-section">
+            <h2>Casos de Uso Comunes</h2>
+            <ul class="usage-list">
+                <li>Bases de datos embebidas en aplicaciones de escritorio.</li>
+                <li>Almacenamiento de datos local para aplicaciones móviles.</li>
+                <li>Bases de datos para navegadores web.</li>
+                <li>Almacenamiento de datos para dispositivos IoT (Internet de las Cosas).</li>
+                <li>Caché para datos temporales.</li>
+                <li>Herramientas de desarrollo y pruebas.</li>
+            </ul>
+        </section>
+
+        <section class="code-section">
+            <h2>Ejemplos de Operaciones SQL en SQLite</h2>
+            <p>Aquí hay algunos ejemplos básicos de operaciones SQL en SQLite:</p>
+
+            <h3>Crear una Tabla</h3>
+            <div class="code-example">
+                <code>
+CREATE TABLE tareas (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    descripcion TEXT NOT NULL,
+    completada BOOLEAN DEFAULT 0
+);
+                </code>
+            </div>
+
+            <h3>Insertar Datos</h3>
+            <div class="code-example">
+                <code>
+INSERT INTO tareas (descripcion) VALUES ('Hacer la compra');
+INSERT INTO tareas (descripcion, completada) VALUES ('Lavar el coche', 1);
+                </code>
+            </div>
+
+            <h3>Seleccionar Datos</h3>
+            <div class="code-example">
+                <code>
+SELECT * FROM tareas;
+SELECT descripcion FROM tareas WHERE completada = 0;
+                </code>
+            </div>
+
+            <h3>Actualizar Datos</h3>
+            <div class="code-example">
+                <code>
+UPDATE tareas SET completada = 1 WHERE id = 1;
+                </code>
+            </div>
+
+            <h3>Eliminar Datos</h3>
+            <div class="code-example">
+                <code>
+DELETE FROM tareas WHERE id = 2;
+                </code>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 DevCommunity</p>
+        <p>Todos los derechos reservados.</p> 
+    </footer>
+</body>
+</html>
