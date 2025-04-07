@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="postgresql.css">
+    <title>PostgreSQL - DevCommunity</title>
+</head>
+<body>
+    <header>
+        <h1>PostgreSQL</h1>
+        <p style="font-size: 1.1em; margin-top: 5px;">El potente sistema de gestión de bases de datos relacional de código abierto</p>
+    </header>
+
+    <div class="container">
+        <section class="intro-section">
+            <div class="image-container">
+                <img src="imagenes/PostgreSQL.png" alt="Logo de PostgreSQL">
+            </div>
+            <div class="text-content">
+                <h2>¿Qué es PostgreSQL?</h2>
+                <p>PostgreSQL, también conocido como Postgres, es un sistema de gestión de bases de datos relacional (RDBMS) potente y de código abierto. Es conocido por su confiabilidad, robustez, cumplimiento de estándares SQL y su rica variedad de características avanzadas. PostgreSQL es desarrollado por una comunidad global de desarrolladores y es utilizado en una amplia gama de aplicaciones, desde pequeñas aplicaciones web hasta grandes sistemas empresariales.</p>
+            </div>
+        </section>
+
+        <section class="feature-section">
+            <h2>Características Destacadas</h2>
+            <ul class="feature-list">
+                <li class="feature-item">
+                    <h3>Extensibilidad</h3>
+                    <p>PostgreSQL es altamente extensible, permitiendo a los usuarios definir sus propios tipos de datos, operadores, funciones, lenguajes y más.</p>
+                </li>
+                <li class="feature-item">
+                    <h3>Cumplimiento de Estándares SQL</h3>
+                    <p>PostgreSQL se adhiere estrictamente a los estándares SQL, lo que facilita la portabilidad y la interoperabilidad.</p>
+                </li>
+                <li class="feature-item">
+                    <h3>Transacciones ACID</h3>
+                    <p>Soporte completo para transacciones ACID (Atomicidad, Consistencia, Aislamiento, Durabilidad), asegurando la integridad de los datos.</p>
+                </li>
+                <li class="feature-item">
+                    <h3>Concurrencia</h3>
+                    <p>Ofrece un control de concurrencia multi-versión (MVCC) para manejar múltiples transacciones simultáneamente sin bloqueos de lectura-escritura.</p>
+                </li>
+                <li class="feature-item">
+                    <h3>Tipos de Datos Avanzados</h3>
+                    <p>Soporta una amplia gama de tipos de datos nativos y permite la creación de tipos personalizados, incluyendo tipos geométricos, arrays, JSON/JSONB, XML y más.</p>
+                </li>
+                <li class="feature-item">
+                    <h3>Confiabilidad y Robustez</h3>
+                    <p>Conocido por su estabilidad y capacidad para manejar cargas de trabajo pesadas de manera confiable.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="code-section">
+            <h2>Ejemplos de Consultas SQL en PostgreSQL</h2>
+            <p>Aquí hay algunos ejemplos básicos de consultas SQL en PostgreSQL:</p>
+
+            <h3>Crear una Tabla</h3>
+            <div class="code-example">
+                <code>
+CREATE TABLE productos (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    precio DECIMAL(10, 2),
+    fecha_creacion TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+                </code>
+            </div>
+
+            <h3>Insertar Datos</h3>
+            <div class="code-example">
+                <code>
+INSERT INTO productos (nombre, precio) VALUES ('Laptop', 1200.50);
+INSERT INTO productos (nombre, precio) VALUES ('Mouse', 25.99);
+                </code>
+            </div>
+
+            <h3>Seleccionar Datos</h3>
+            <div class="code-example">
+                <code>
+SELECT * FROM productos;
+SELECT nombre, precio FROM productos WHERE precio > 100;
+                </code>
+            </div>
+
+            <h3>Actualizar Datos</h3>
+            <div class="code-example">
+                <code>
+UPDATE productos SET precio = 1250.00 WHERE nombre = 'Laptop';
+                </code>
+            </div>
+
+            <h3>Eliminar Datos</h3>
+            <div class="code-example">
+                <code>
+DELETE FROM productos WHERE nombre = 'Mouse';
+                </code>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 DevCommunity</p>
+        <p>Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
