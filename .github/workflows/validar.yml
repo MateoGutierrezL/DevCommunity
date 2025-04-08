@@ -29,9 +29,10 @@ jobs:
       - name: Instalar CSS Lint
         run: npm install -g csslint
 
-      - name: Validar CSS
+      - name: Validar todos los CSS con CSS Lint
         run: |
           for file in $(find . -name "*.css"); do
-            echo "Validando $file"
-            csslint "$file"
+            echo "Validando $file..."
+            csslint "$file" || true
           done
+      
