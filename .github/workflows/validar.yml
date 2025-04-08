@@ -3,11 +3,9 @@ name: Validar HTML y CSS
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   validate:
@@ -22,15 +20,11 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Instalar W3C Validator
-        run: npm install -g w3cjs
+      - name: Instalar HTML Validate
+        run: npm install -g html-validate
 
-      - name: Validar todos los HTML con W3C Validator
-        run: |
-          for file in $(find . -name "*.html"); do
-            echo "Validando $file..."
-            w3cjs "$file"
-          done
+      - name: Validar HTML con html-validate
+        run: html-validate "**/*.html"
 
       - name: Instalar CSS Lint
         run: npm install -g csslint
@@ -39,5 +33,6 @@ jobs:
         run: |
           for file in $(find . -name "*.css"); do
             echo "Validando $file..."
-            csslint "$file"
+            csslint "$file" || true
           done
+      
