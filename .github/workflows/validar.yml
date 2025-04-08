@@ -1,4 +1,3 @@
-#validar arreglado
 name: Validar HTML y CSS
 
 on:
@@ -31,11 +30,13 @@ jobs:
             echo "Validando $file..."
             w3cjs "$file"
           done
-      
 
       - name: Instalar CSS Lint
         run: npm install -g csslint
 
-      - name: Validar todos los archivos CSS
-        run: csslint **/*.css
-      
+      - name: Validar todos los CSS con CSS Lint
+        run: |
+          for file in $(find . -name "*.css"); do
+            echo "Validando $file..."
+            csslint "$file"
+          done
