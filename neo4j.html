@@ -101,7 +101,7 @@ CREATE (a)-[:AMIGO_DE]-&gt;(b),
        (a)-[:AMIGO_DE]-&gt;(c);
 
 // Consulta de relaciones
-MATCH (p:Persona)-[:AMIGO_DE]->(amigo)
+MATCH (p:Persona)-[:AMIGO_DE]-&gt;(amigo)
 WHERE p.nombre = 'Ana'
 RETURN amigo.nombre AS Amigo
         </code>
