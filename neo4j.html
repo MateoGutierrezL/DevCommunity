@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="neo4j.css">
+  <title>Neo4j - DevCommunity</title>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Neo4j</h1>
+      <p>Base de datos NoSQL de grafos, optimizada para almacenar y consultar relaciones entre datos.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Sección de introducción -->
+    <section class="intro-section">
+      <div class="intro-image">
+        <img src="imagenes/neo4j.webp" alt="Logo de Neo4j">
+      </div>
+      <div class="intro-text">
+        <h2>¿Qué es Neo4j?</h2>
+        <p>
+          Neo4j es una base de datos NoSQL diseñada para manejar grafos de datos, permitiendo modelar, almacenar y consultar relaciones complejas de forma eficiente. Su arquitectura de grafos facilita la representación de datos interconectados y es ideal para problemas de redes sociales, análisis de fraude, y sistemas de recomendaciones, entre otros.
+        </p>
+        <p>
+          A diferencia de las bases de datos relacionales tradicionales, Neo4j emplea nodos, relaciones y propiedades para representar la información, lo que permite realizar consultas complejas de manera natural y con un rendimiento optimizado.
+        </p>
+      </div>
+    </section>
+
+    <!-- Sección de características -->
+    <section class="features-section">
+      <h2>Características Principales</h2>
+      <div class="features-grid">
+        <div class="feature-box">
+          <h3>Modelo de Grafos</h3>
+          <p>Organiza la información en nodos y relaciones, facilitando consultas sobre conexiones y patrones.</p>
+        </div>
+        <div class="feature-box">
+          <h3>Alto Rendimiento</h3>
+          <p>Optimizado para ejecutar consultas complejas en tiempo real, incluso con grandes volúmenes de datos interconectados.</p>
+        </div>
+        <div class="feature-box">
+          <h3>Escalabilidad</h3>
+          <p>Soporta implementaciones tanto en modo embebido como distribuido, permitiendo crecer conforme lo requieren las aplicaciones.</p>
+        </div>
+        <div class="feature-box">
+          <h3>Lenguaje Cypher</h3>
+          <p>Utiliza Cypher, un lenguaje de consulta declarativo que facilita la extracción de patrones en grafos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de ventajas y casos de uso -->
+    <section class="use-cases-section">
+      <h2>Ventajas y Casos de Uso</h2>
+      <div class="cases-content">
+        <div class="case">
+          <h3>Redes Sociales</h3>
+          <p>
+            Permite modelar la estructura de redes complejas, facilitando la identificación de comunidades, influenciadores y relaciones de amistad.
+          </p>
+        </div>
+        <div class="case">
+          <h3>Análisis de Fraude</h3>
+          <p>
+            Detecta patrones inusuales en transacciones y conexiones entre entidades, ayudando a prevenir actividades fraudulentas.
+          </p>
+        </div>
+        <div class="case">
+          <h3>Sistemas de Recomendación</h3>
+          <p>
+            Relaciona productos, usuarios y preferencias para generar recomendaciones personalizadas basadas en similitudes y conexiones.
+          </p>
+        </div>
+      </div>
+      <p class="additional-info">
+        Gracias a su flexibilidad, Neo4j se utiliza en múltiples industrias para encontrar valor en la interconexión de datos y proveer insights que otras arquitecturas podrían pasar por alto.
+      </p>
+    </section>
+
+    <!-- Sección de Ejemplo de Consulta con Cypher -->
+    <section class="cypher-section">
+      <h2>Ejemplo de Consulta con Cypher</h2>
+      <p>
+        A continuación se muestra un ejemplo básico de cómo crear nodos, establecer relaciones y consultar el grafo utilizando Cypher:
+      </p>
+      <div class="code-block">
+        <code>
+// Crear nodos
+CREATE (a:Persona {nombre: 'Ana', edad: 28}),
+       (b:Persona {nombre: 'Luis', edad: 35}),
+       (c:Persona {nombre: 'Carlos', edad: 40});
+
+// Establecer relaciones
+CREATE (a)-[:AMIGO_DE]->(b),
+       (b)-[:AMIGO_DE]->(c),
+       (a)-[:AMIGO_DE]->(c);
+
+// Consulta de relaciones
+MATCH (p:Persona)-[:AMIGO_DE]->(amigo)
+WHERE p.nombre = 'Ana'
+RETURN amigo.nombre AS Amigo
+        </code>
+      </div>
+      <p>
+        Este ejemplo ilustra cómo modelar relaciones de amistad y recuperar los nombres de las personas que son amigas de Ana.
+      </p>
+    </section>
+
+    <!-- Sección de recursos adicionales -->
+    <section class="resources-section">
+      
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 DevCommunity</p>
+    <p>Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="cassandra.css">
+  <title>Cassandra - DevCommunity</title>
+</head>
+<body>
+  <header>
+    <h1>Cassandra</h1>
+    <p style="font-size: 1.2em; margin-top: 10px;">
+      Base de datos NoSQL distribuida y altamente escalable, diseñada para alta disponibilidad y rendimiento.
+    </p>
+  </header>
+
+  <div class="main-container">
+    <section class="overview-section">
+      <div class="overview-image">
+        <img src="imagenes/Cassandra.png" alt="Logo de Cassandra">
+      </div>
+      <div class="overview-text">
+        <h2>Innovación en el manejo de datos</h2>
+        <p>
+          Cassandra es reconocida por su capacidad para gestionar grandes volúmenes de datos a escala. Su diseño distribuido garantiza alta disponibilidad, eliminando puntos de fallo y ofreciendo rendimiento constante en ambientes críticos.
+        </p>
+      </div>
+    </section>
+
+    <section class="features-section">
+      <h2>Características Clave</h2>
+      <div class="features-grid">
+        <div class="feature-box">
+          <h3>Alta Escalabilidad</h3>
+          <p>Agrega nodos sin tiempo de inactividad y maneja incrementos exponenciales en datos.</p>
+        </div>
+        <div class="feature-box">
+          <h3>Alta Disponibilidad</h3>
+          <p>Diseñada para eliminar puntos únicos de fallo mediante replicación.</p>
+        </div>
+        <div class="feature-box">
+          <h3>Consistencia Eventual</h3>
+          <p>Ofrece un esquema flexible de consistencia en un entorno distribuido.</p>
+        </div>
+        <div class="feature-box">
+          <h3>Rendimiento Optimizado</h3>
+          <p>Procesa lecturas y escrituras a alta velocidad, incluso a gran escala.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="demo-section">
+      <h2>Ejemplo Básico de CQL</h2>
+      <p>
+        Cassandra utiliza CQL (Cassandra Query Language) para interactuar con los datos. A continuación, un ejemplo básico:
+      </p>
+      <div class="demo-code">
+        <code>
+// Crear un keyspace con replicación
+CREATE KEYSPACE miKeyspace WITH REPLICATION = {
+  'class': 'SimpleStrategy', 
+  'replication_factor': 3
+};
+
+// Seleccionar el keyspace
+USE miKeyspace;
+
+// Crear una tabla de usuarios
+CREATE TABLE usuarios (
+  id UUID PRIMARY KEY,
+  nombre text,
+  email text
+);
+
+// Insertar datos en la tabla
+INSERT INTO usuarios (id, nombre, email) 
+VALUES (uuid(), 'Carlos Sánchez', 'carlos@example.com');
+
+// Consultar datos de la tabla
+SELECT * FROM usuarios;
+        </code>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 DevCommunity</p>
+    <p>Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
