@@ -14,7 +14,7 @@ se encuentra una descripción mas detallada sobre cada una de las bases de datos
 Link: https://mateogutierrezl.github.io/DevCommunity/
 
 <h2>¿Como abrir el proyecto localmente?</h2>
-Para abrir el proyecto localmente, inicialmente se tiene que descargar desde el boton verde que aparece en la zona de todos los archivos, seleccionamos descargar .zip <br>
+Para abrir el proyecto localmente, inicialmente se tiene que descargar desde el boton verde que aparece en la zona de todos los archivos, seleccionamos descargar .zip <br><br>
 
 Despues de descargar el repositorio se ingresa al explorador de archivos del computador, buscamos la carpeta comprimida descargada, presionamos clic derecho sobre el archivo, y 
 posteriormente seleccionamos extraer. <br>
