@@ -58,7 +58,7 @@
         <code>
 // Crear un keyspace con replicación
 CREATE KEYSPACE miKeyspace WITH REPLICATION = {
-  'class': 'SimpleStrategy', 
+  'class': 'SimpleStrategy',
   'replication_factor': 3
 };
 
@@ -73,7 +73,7 @@ CREATE TABLE usuarios (
 );
 
 // Insertar datos en la tabla
-INSERT INTO usuarios (id, nombre, email) 
+INSERT INTO usuarios (id, nombre, email)
 VALUES (uuid(), 'Carlos Sánchez', 'carlos@example.com');
 
 // Consultar datos de la tabla
