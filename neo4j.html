@@ -96,9 +96,9 @@ CREATE (a:Persona {nombre: 'Ana', edad: 28}),
        (c:Persona {nombre: 'Carlos', edad: 40});
 
 // Establecer relaciones
-CREATE (a)-[:AMIGO_DE]-&gt(b),
-       (b)-[:AMIGO_DE]-&gt(c),
-       (a)-[:AMIGO_DE]-&gt(c);
+CREATE (a)-[:AMIGO_DE]-&gt;(b),
+       (b)-[:AMIGO_DE]-&gt;(c),
+       (a)-[:AMIGO_DE]-&gt;(c);
 
 // Consulta de relaciones
 MATCH (p:Persona)-[:AMIGO_DE]->(amigo)
