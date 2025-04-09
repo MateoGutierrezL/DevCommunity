@@ -10,98 +10,70 @@
   <header>
     <div class="header-content">
       <h1>DynamoDB</h1>
-      <p>
-        Servicio de base de datos NoSQL clave-valor totalmente gestionado y escalable.
-      </p>
+      <p>Servicio de base de datos NoSQL clave-valor totalmente gestionado y escalable.</p>
     </div>
   </header>
 
   <main class="container">
-    <!-- Sección Hero: imagen destacada -->
     <section class="hero-section">
-      <img src="imagenes/DynamoDB.webp" alt="Logo de DynamoDB" class="hero-image" style="width: 300px; height: auto;" alt="DynamoDB"> 
+      <img src="imagenes/DynamoDB.webp" alt="Logo de DynamoDB" class="hero-image">
       <h2>DynamoDB en Acción</h2>
-      <p>
-        Con DynamoDB, Amazon garantiza un servicio de base de datos rápido y predecible sin la sobrecarga de la administración del servidor.
-      </p>
+      <p>Con DynamoDB, Amazon garantiza un servicio de base de datos rápido y predecible sin la sobrecarga de la administración del servidor.</p>
     </section>
 
-    <!-- Sección de Introducción -->
     <section class="intro-section">
       <h2>¿Qué es DynamoDB?</h2>
-      <p>
-        DynamoDB es un servicio completamente gestionado que ofrece una base de datos NoSQL clave-valor de alto rendimiento y escalable. Gracias a su arquitectura, elimina la necesidad de preocuparse por la configuración, mantenimiento o escalabilidad manual del hardware.
-      </p>
-      <p>
-        Este servicio es ideal para aplicaciones que requieren latencia mínima y la capacidad de escalar de forma automática para manejar cargas de trabajo variables, ya sea en aplicaciones móviles, web o de IoT.
-      </p>
+      <p>DynamoDB es un servicio completamente gestionado que ofrece una base de datos NoSQL clave-valor de alto rendimiento y escalable. Gracias a su arquitectura, elimina la necesidad de preocuparse por la configuración, mantenimiento o escalabilidad manual del hardware.</p>
+      <p>Este servicio es ideal para aplicaciones que requieren latencia mínima y la capacidad de escalar de forma automática para manejar cargas de trabajo variables, ya sea en aplicaciones móviles, web o de IoT.</p>
     </section>
 
-    <!-- Sección de Características Clave -->
     <section class="features-section">
       <h2>Características Clave</h2>
       <div class="features-grid">
         <div class="feature-box">
           <h3>Gestión Total</h3>
-          <p>
-            AWS gestiona la infraestructura, asegurando disponibilidad y respaldo continuo sin intervención manual.
-          </p>
+          <p>AWS gestiona la infraestructura, asegurando disponibilidad y respaldo continuo sin intervención manual.</p>
         </div>
         <div class="feature-box">
           <h3>Eficiencia en Escala</h3>
-          <p>
-            Escala automáticamente para manejar aumentos y disminuciones en el tráfico, manteniendo un rendimiento consistente.
-          </p>
+          <p>Escala automáticamente para manejar aumentos y disminuciones en el tráfico, manteniendo un rendimiento consistente.</p>
         </div>
         <div class="feature-box">
           <h3>Latencia Baja</h3>
-          <p>
-            Ofrece respuestas rápidas con baja latencia, ideales para aplicaciones en tiempo real.
-          </p>
+          <p>Ofrece respuestas rápidas con baja latencia, ideales para aplicaciones en tiempo real.</p>
         </div>
         <div class="feature-box">
           <h3>Seguridad Integrada</h3>
-          <p>
-            Incluye características de seguridad como cifrado en reposo y en tránsito, junto con integración con IAM.
-          </p>
+          <p>Incluye características de seguridad como cifrado en reposo y en tránsito, junto con integración con IAM.</p>
         </div>
       </div>
     </section>
 
-    <!-- Sección de Modelado y Arquitectura -->
     <section class="architecture-section">
       <h2>Arquitectura y Modelado de Datos</h2>
-      <p>
-        DynamoDB utiliza un modelo de datos simple basado en pares clave-valor y documentos. Cada ítem se identifica por una clave primaria, la cual puede estar compuesta solo por una clave de partición o por una combinación de clave de partición y clave de ordenamiento.
-      </p>
-      <p>
-        La arquitectura distribuida permite distribuir los datos de forma automática en múltiples nodos, lo que significa que la carga se reparte y se optimiza el rendimiento sin intervención directa.
-      </p>
+      <p>DynamoDB utiliza un modelo de datos simple basado en pares clave-valor y documentos. Cada ítem se identifica por una clave primaria, la cual puede estar compuesta solo por una clave de partición o por una combinación de clave de partición y clave de ordenamiento.</p>
+      <p>La arquitectura distribuida permite distribuir los datos de forma automática en múltiples nodos, lo que significa que la carga se reparte y se optimiza el rendimiento sin intervención directa.</p>
       <div class="diagram">
-        <!-- Puedes insertar una imagen de un diagrama o usar un SVG -->
         <img src="imagenes/dynamodb_diagrama.png" alt="Diagrama de la arquitectura de DynamoDB">
       </div>
     </section>
 
-    <!-- Sección de Ejemplo de Uso con AWS CLI -->
     <section class="demo-section">
       <h2>Ejemplo de Uso con AWS CLI</h2>
-      <p>
-        A continuación, se muestra un ejemplo básico de cómo crear una tabla y gestionar ítems utilizando la AWS CLI:
-      </p>
+      <p>A continuación, se muestra un ejemplo básico de cómo crear una tabla y gestionar ítems utilizando la AWS CLI:</p>
       <div class="code-block">
         <code>
 # Crear una tabla en DynamoDB
 aws dynamodb create-table \
-    --table-name Usuarios \
-    --attribute-definitions AttributeName=ID,AttributeType=S \
-    --key-schema AttributeName=ID,KeyType=HASH \
-    --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5
+  --table-name Usuarios \
+  --attribute-definitions AttributeName=ID,AttributeType=S \
+  --key-schema AttributeName=ID,KeyType=HASH \
+  --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5
 
 # Insertar un ítem en la tabla
 aws dynamodb put-item \
-    --table-name Usuarios \
-    --item '{"ID": {"S": "123"}, "Nombre": {"S": "Ana García"}, "Email": {"S": "ana.garcia@example.com"}}'
+  --table-name Usuarios \
+  --item '{"ID": {"S": "123"}, "Nombre": {"S": "Ana García"}, "Email": {"S": "ana.garcia@example.com"}}'
 
 # Escanear la tabla
 aws dynamodb scan --table-name Usuarios
@@ -109,12 +81,9 @@ aws dynamodb scan --table-name Usuarios
       </div>
     </section>
 
-    <!-- Sección de Beneficios y Casos de Uso -->
     <section class="benefits-section">
       <h2>Beneficios y Casos de Uso</h2>
-      <p>
-        Gracias a sus características, DynamoDB es ideal para:
-      </p>
+      <p>Gracias a sus características, DynamoDB es ideal para:</p>
       <ul>
         <li><strong>Aplicaciones Web y Móviles:</strong> Respondiendo a picos de tráfico sin pérdida de rendimiento.</li>
         <li><strong>Sistemas de IoT:</strong> Recoger y analizar datos en tiempo real desde millones de dispositivos.</li>
@@ -123,10 +92,7 @@ aws dynamodb scan --table-name Usuarios
       </ul>
     </section>
 
-    <!-- Sección de Recursos Adicionales -->
-    <section class="resources-section">
-     
-    </section>
+    <section class="resources-section"></section>
   </main>
 
   <footer>
