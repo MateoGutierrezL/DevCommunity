@@ -115,6 +115,11 @@ body {
     font-size: 1em;
     line-height: 1.5;
   }
+  /* Imagen Hero con tamaño fijo removido del HTML */
+.fixed-size-image {
+  width: 100px;
+  height: 200px;
+}
   
   /* Sección de Arquitectura */
   .architecture-section {
